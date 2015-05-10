@@ -1,12 +1,13 @@
 var express = require('express');
 var path = require('path');
-var favicon = require('serve-favicon');
+//var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var marknad = require('./routes/marknad');
+var konto = require('./routes/konto');
 var om = require('./routes/om');
 var users = require('./routes/users');
 
@@ -26,6 +27,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/marknad', marknad);
+app.use('/konto', konto);
 app.use('/om', om);
 app.use('/users', users);
 

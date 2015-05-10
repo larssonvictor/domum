@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 var index = require('./routes/index');
 var marknad = require('./routes/marknad');
 var konto = require('./routes/konto');
+var login = require('./routes/login');
 var om = require('./routes/om');
 var users = require('./routes/users');
 
@@ -28,6 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/marknad', marknad);
 app.use('/konto', konto);
+app.use('/login', login);
 app.use('/om', om);
 app.use('/users', users);
 

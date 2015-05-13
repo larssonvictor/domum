@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Logga in</title>
-        <link rel='stylesheet' href='/stylesheets/style.css' />
-    </head>
-    <body>
-        <% include template/header.ejs%>
+<head>
+    <title>Login</title>
 
-        <h1>Logga in</h1>
+    <link rel="stylesheet" href="stylesheets/bootstrap.css">
+    <link rel='stylesheet' href='stylesheets/loginView.css'>
+</head>
+<body>
 
-    </body>
+    <div class="wrapper">
+        <form class="form-signin">
+            <h2 class="form-signin-heading">Please login</h2>
+            <input type="text" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+            <input type="password" class="form-control" name="password" placeholder="Password" required=""/>
+            <label class="checkbox">
+                <input type="checkbox" value="remember-me" id="rememberMe" name="rememberMe"> Remember me
+            </label>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+        </form>
+    </div>
+
+</body>
 </html>
